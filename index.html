@@ -871,4 +871,30 @@
                 header.style.background = 'rgba(10, 10, 15, 0.95)';
                 header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
             } else {
-                header.style.background = 'rgba
+                header.style.background = 'rgba(10, 10, 15, 0.9)';
+                header.style.boxShadow = 'none';
+                //complete the code copilot
+            }
+            handleScrollAnimations();   
+        });
+        // Initialize particles and AI brain
+        createParticles();  
+        createAIBrain();
+        // Initial scroll animations
+        handleScrollAnimations();
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('href');
+                smoothScroll(target);
+            });
+        });
+        // Smooth scroll for FAB
+        document.querySelector('.fab').addEventListener('click', scrollToTop);
+    </script>
+</body>
+</html>
+<!-- End of HTML Document -->
+ 
+
